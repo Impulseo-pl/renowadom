@@ -784,3 +784,65 @@
 
 /* === licznik otwarć demo (buy-signal) v3 — geo po stronie serwera === */
 (function(){try{if(String(location.protocol).indexOf('http')!==0)return;try{if(/[?&#]team=1/.test(location.search+location.hash)){localStorage.setItem('nb_team','1');}}catch(e){}try{if(localStorage.getItem('nb_team')==='1')return;}catch(e){}if(/crm-newbeginning|crm\.impulseo\.pl/.test(document.referrer||''))return;try{if(navigator.webdriver)return;}catch(e){}try{if(/^https?:\/\/(kris20032|impulseo-pl)\.github\.io\/?$/i.test(document.referrer||''))return;}catch(e){}if(sessionStorage.getItem('_dv'))return;sessionStorage.setItem('_dv','1');var seg=(location.pathname.split('/').filter(Boolean)[0])||'';var base=location.origin+(seg?('/'+seg):'');var ua='';try{ua=(navigator.userAgent||'').slice(0,300);}catch(e){}var EP='https://zngfubfinbojfgaxdrbf.supabase.co/functions/v1/demo-view';try{fetch(EP,{method:'POST',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({demo_url:base,page:location.pathname,referrer:(document.referrer||null),user_agent:(ua||null)})}).catch(function(){});}catch(e){}}catch(e){}})();
+
+/* === MOTYW „technical navy" (wzór thermokonnect.com, 13.11.2026) ===
+   1) Hero: miniatury pod zdjęciem zamieniają się miejscami ze zdjęciem głównym (przenikanie,
+      bez skalowania). Każdy plik jest na stronie raz - kadr wraca do miniatury, z której przyszedł.
+   2) Usługi: boczny spis podświetla usługę, która jest teraz na ekranie. */
+(function () {
+  try {
+    var stage = document.querySelector('.th-stage img');
+    var cap = document.querySelector('.th-visual figcaption');
+    var cur = document.querySelector('.th-count .cur');
+    var btns = document.querySelectorAll('.th-thumbs button');
+    if (stage && btns.length) {
+      var busy = false;
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          if (busy) return;
+          var t = b.querySelector('img');
+          if (!t) return;
+          busy = true;
+          var s = { src: stage.getAttribute('src'), alt: stage.alt, no: stage.dataset.no, cap: stage.dataset.cap };
+          var n = { src: t.getAttribute('src'), alt: t.alt, no: t.dataset.no, cap: t.dataset.cap };
+          stage.classList.add('is-off');
+          setTimeout(function () {
+            stage.src = n.src; stage.alt = n.alt; stage.dataset.no = n.no; stage.dataset.cap = n.cap;
+            t.src = s.src; t.alt = s.alt; t.dataset.no = s.no; t.dataset.cap = s.cap;
+            var lab = b.querySelector('span'); if (lab) lab.textContent = s.no;
+            b.setAttribute('aria-label', 'Pokaż: ' + s.cap);
+            if (cap) cap.textContent = n.no + ' / ' + n.cap;
+            if (cur) cur.textContent = n.no;
+            var gotowe = function () { stage.classList.remove('is-off'); busy = false; };
+            if (stage.complete) requestAnimationFrame(gotowe); else { stage.onload = gotowe; setTimeout(gotowe, 1200); }
+          }, 450);
+        });
+      });
+    }
+  } catch (e) {}
+  try {
+    var links = document.querySelectorAll('.pr-side a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) return;
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (wpisy) {
+      wpisy.forEach(function (w) {
+        if (!w.isIntersecting) return;
+        links.forEach(function (a) { a.classList.remove('is-on'); });
+        var a = map[w.target.id]; if (a) a.classList.add('is-on');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  } catch (e) {}
+})();
+
+/* Stopklatka: przyklejone tło pokazujemy dopiero, gdy sekcja jest blisko ekranu
+   (bez JS zostaje widoczne jak zawsze). */
+(function () {
+  var s = document.querySelectorAll('.stopklatka');
+  if (!s.length || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (en) {
+    en.forEach(function (e) { e.target.classList.toggle('stk-wait', !e.isIntersecting); });
+  }, { rootMargin: '60% 0px 60% 0px' });
+  s.forEach(function (el) { el.classList.add('stk-wait'); io.observe(el); });
+})();

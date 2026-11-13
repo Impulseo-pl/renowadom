@@ -19,100 +19,110 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=8b665260">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=20261113">
 </head>
 <body>
 
 <header class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="index.html"><span class="name">RenowaDom</span><span class="sub">Katowice</span></a>
-    <nav class="nav-links">
+  <div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="RenowaDom - strona główna"><span class="name">Renowa<b>Dom</b></span><span class="sub">Wykończenia wnętrz · Katowice</span></a>
+    <nav class="nav-links" aria-label="Menu główne">
       <a href="oferta.html">Oferta</a>
-      <a href="realizacje.html" class="active" aria-current="page">Realizacje</a>
-      <a href="o-nas.html">O nas</a>
+      <a href="realizacje.html" aria-current="page">Realizacje</a>
+      <a href="o-nas.html">O&nbsp;nas</a>
       <a href="kontakt.html">Kontakt</a>
-      <a href="tel:+48789758400" class="btn btn-accent">Zadzwoń +48 789 758 400</a>
+      <a class="nav-call" href="tel:+48789758400"><svg class="ico-tel" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/></svg><span class="lab">Zadzwoń</span> +48 789 758 400</a>
     </nav>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <main>
-<section class="pagehead">
-  <img src="img/g11.jpg" alt="RenowaDom - Przykłady prac" width="1600" height="1068" decoding="async">
-  <div class="wrap">
-    <span class="eyebrow">Realizacje</span>
-    <h1>Przykłady prac</h1>
-    <p>Gładzie, malowanie, panele i posadzki, czyli efekty, o które najczęściej pytają klienci.</p>
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <div class="gallery">
-      <div class="tile t-two3 reveal"><img src="img/g1.jpg" alt="RenowaDom" loading="lazy" width="1600" height="1066" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g2.jpg" alt="RenowaDom" loading="lazy" width="1600" height="1068" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g3.jpg" alt="RenowaDom" loading="lazy" width="1600" height="1066" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g4.jpg" alt="RenowaDom" loading="lazy" width="1600" height="1068" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g5.jpg" alt="RenowaDom" loading="lazy" width="1600" height="1068" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g6.jpg" alt="RenowaDom" loading="lazy" width="1600" height="1068" decoding="async"></div>
-      <div class="tile t-two3 reveal"><img src="img/g7.jpg" alt="RenowaDom" loading="lazy" width="1600" height="1066" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g8.jpg" alt="RenowaDom" loading="lazy" width="1600" height="1068" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g9.jpg" alt="RenowaDom" loading="lazy" width="1880" height="1254" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g10.jpg" alt="RenowaDom" loading="lazy" width="1538" height="996" decoding="async"></div>
-      <div class="tile t-two3 reveal"><img src="img/g12.jpg" alt="RenowaDom" loading="lazy" width="1600" height="1068" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g13.jpg" alt="RenowaDom" loading="lazy" width="1600" height="1068" decoding="async"></div>
+<section class="tk-ph">
+  <div class="ph-grid">
+    <div>
+      <div class="crumbs">RenowaDom / <b>Realizacje</b></div>
+      <span class="chip">Przykłady prac</span>
+      <h1 style="margin-top:18px">Realizacje</h1>
+      <div class="th-lead"><span class="cross" aria-hidden="true"><i></i></span><p>Gładzie, malowanie, panele i&nbsp;posadzki, czyli efekty, o&nbsp;które najczęściej pytają klienci.</p></div>
     </div>
+    <figure class="ph-fig"><img src="img/g11.jpg" alt="Przedpokój po wykończeniu" width="1600" height="1068" fetchpriority="high" decoding="async"></figure>
   </div>
 </section>
-<section class="cta">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Współpraca</span>
+
+<section class="tk-gal">
+  <div class="head">
+    <div><span class="kicker">Galeria</span><h2>Wnętrza po wykończeniu</h2></div>
+    <div class="head-side"><p>Równe ściany, czyste kanty, podłogi bez szczelin. Tak wygląda mieszkanie, które oddajemy po odbiorze.</p></div>
+  </div>
+  <div class="gallery">
+      <figure class="tile t-a reveal"><img src="img/g1.jpg" alt="Szlifowanie gładzi na suficie" width="1600" height="1066" decoding="async"><span class="no">01</span></figure>
+      <figure class="tile t-b reveal"><img src="img/g2.jpg" alt="Pokój po malowaniu, ściana w kolorze" width="1600" height="1068" decoding="async"><span class="no">02</span></figure>
+      <figure class="tile t-c reveal"><img src="img/g4.jpg" alt="Panele i ściana z cegły" width="1600" height="1068" decoding="async"><span class="no">03</span></figure>
+      <figure class="tile t-c reveal"><img src="img/g13.jpg" alt="Biała kuchnia po remoncie" width="1600" height="1068" decoding="async"><span class="no">04</span></figure>
+      <figure class="tile t-c reveal"><img src="img/g8.jpg" alt="Poddasze po wykończeniu" width="1600" height="1068" decoding="async"><span class="no">05</span></figure>
+      <figure class="tile t-b reveal"><img src="img/g12.jpg" alt="Pokój z panelami w ciepłym odcieniu" width="1600" height="1068" decoding="async"><span class="no">06</span></figure>
+      <figure class="tile t-a reveal"><img src="img/g9.jpg" alt="Posadzka żywiczna w hali" width="1880" height="1254" decoding="async"><span class="no">07</span></figure>
+      <figure class="tile t-c reveal"><img src="img/g6.jpg" alt="Pokój z ciemnymi panelami" width="1600" height="1068" decoding="async"><span class="no">08</span></figure>
+      <figure class="tile t-c reveal"><img src="img/g5.jpg" alt="Jasny pokój z zabudową" width="1600" height="1068" decoding="async"><span class="no">09</span></figure>
+      <figure class="tile t-c reveal"><img src="img/g10.jpg" alt="Salon ze ścianą dekoracyjną" loading="lazy" width="1538" height="996" decoding="async"><span class="no">10</span></figure>
+      <figure class="tile t-d reveal"><img src="img/g7.jpg" alt="Pokój z wyjściem na balkon" loading="lazy" width="1600" height="1066" decoding="async"><span class="no">11</span></figure>
+      <figure class="tile t-d reveal"><img src="img/g3.jpg" alt="Szpachlowanie narożnika" loading="lazy" width="1600" height="1066" decoding="async"><span class="no">12</span></figure>
+  </div>
+</section>
+<section class="tk-band" aria-label="Jak pracujemy w skrócie">
+  <ul class="band-row">
+    <li><small>/01</small>Oględziny na miejscu</li>
+    <li><small>/02</small>Cena przed startem</li>
+    <li><small>/03</small>Meble pod folią</li>
+    <li><small>/04</small>Od gładzi po posadzkę</li>
+    <li><small>/05</small>Katowice i&nbsp;okolice</li>
+  </ul>
+</section>
+
+<section class="cta tk-cta">
+  <div class="cta-card reveal">
+    <div class="cta-copy">
       <h2>Podoba Ci się taki efekt?</h2>
-      <p>Opowiedz, co trzeba zrobić - przygotujemy wycenę.</p>
+      <p>Opowiedz, co trzeba zrobić. Przyjadę na oględziny i&nbsp;podam cenę przed startem.</p>
+      <a class="btn-dark" href="tel:+48789758400"><span class="t">Zadzwoń</span><span class="n">+48 789 758 400</span><span class="arr-r" aria-hidden="true">↳</span></a>
     </div>
-    <div class="cta-actions reveal">
-      <a href="kontakt.html" class="btn btn-light">Zapytaj o wycenę <span class="arr">→</span></a>
-      <a href="tel:+48789758400" class="btn btn-ghost btn-ghost-cta">+48 789 758 400</a>
-    </div>
+    <figure class="cta-fig"><img src="img/about.jpg" alt="Sprawdzanie równości ściany łatą" loading="lazy" width="1780" height="1128" decoding="async"><span class="cross" aria-hidden="true"><i></i></span></figure>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <div class="name">RenowaDom</div>
-        <p>Gładzie, malowanie, tynki dekoracyjne, panele i posadzki z żywicy.</p>
-      </div>
-      <div class="foot-col">
-        <h4>Nawigacja</h4>
-        <a href="oferta.html">Oferta</a>
-        <a href="realizacje.html">Realizacje</a>
-        <a href="o-nas.html">O nas</a>
-        <a href="kontakt.html">Kontakt</a>
-      </div>
-      <div class="foot-col">
-        <h4>Kontakt</h4>
-        <a href="tel:+48789758400">+48 789 758 400</a>
-        <a href="mailto:renowadom@gmail.com">renowadom@gmail.com</a>
-        <p>Katowice, śląskie</p>
-      <div class="foot-soc">
-        <a class="soc" href="https://www.facebook.com/p/RenowaDom-61563650875836/" target="_blank" rel="noopener" aria-label="Facebook - RenowaDom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" fill="currentColor"/></svg></a>
-      </div>
-      </div>
+  <div class="foot-top">
+    <div class="foot-nav">
+      <span class="cross" aria-hidden="true"><i></i></span>
+      <ul>
+        <li><a href="oferta.html">Oferta</a></li>
+        <li><a href="realizacje.html">Realizacje</a></li>
+        <li><a href="o-nas.html">O&nbsp;nas</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
     </div>
-    <div class="foot-bot">
-      <span>© 2026 RenowaDom</span>
-      <span>Projekt strony: <a class="foot-credit" href="https://impulseo.pl" target="_blank" rel="noopener">Impulseo</a></span>
+    <figure class="foot-fig"><img src="img/g15.jpg" alt="Nakładanie gładzi pacą na ścianę" loading="lazy" width="1600" height="1066" decoding="async"></figure>
+    <div class="foot-info">
+      <div class="top"><span>RenowaDom © 2026</span><span>Gładzie · malowanie · tynki · panele · żywica</span></div>
+      <dl>
+        <dt><svg class="ico-pin" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="12" cy="9.5" r="2.4" fill="currentColor"/></svg></dt><dd>Katowice i&nbsp;okolice<br>województwo śląskie</dd>
+        <dt><svg class="ico-tel" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/></svg></dt><dd><a href="tel:+48789758400">+48 789 758 400</a></dd>
+        <dt><svg class="ico-mail" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.2" y="5.5" width="17.6" height="13" rx="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></dt><dd><a href="mailto:renowadom@gmail.com">renowadom@gmail.com</a></dd>
+        <dt><span class="mono">FB</span></dt><dd><div class="foot-soc"><a class="soc" href="https://www.facebook.com/p/RenowaDom-61563650875836/" target="_blank" rel="noopener" aria-label="Facebook - RenowaDom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" fill="currentColor"/></svg></a></div></dd>
+      </dl>
     </div>
   </div>
+  <div class="foot-bot">
+    <span>© 2026 RenowaDom</span>
+    <span>Projekt strony: <a class="foot-credit" href="https://impulseo.pl" target="_blank" rel="noopener">Impulseo</a></span>
+  </div>
 </footer>
-<div class="sticky-call"><a class="sc-call" href="tel:+48789758400"><svg class="ico-tel" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/></svg> Zadzwoń</a><a class="sc-quote" href="kontakt.html">Zadzwoń po wycenę</a></div>
+<div class="sticky-call"><a class="sc-call" href="tel:+48789758400"><svg class="ico-tel" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/></svg> Zadzwoń</a><a class="sc-quote" href="kontakt.html">Zapytaj o&nbsp;wycenę</a></div>
 <div class="demo-wazne" data-do="2026-11-18" data-cykl="3" hidden><svg class="dw-ico" width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.2V12l3.3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="dw-txt"></span></div>
 
-<script src="assets/main.js"></script>
+<script src="assets/main.js?v=20261113"></script>
 </body>
 </html>
